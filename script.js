@@ -10,7 +10,9 @@ function formatTime(theTime) {
    let status = '';
    if (theHour > 12) {
       theHour -= 12;
-      theHour = "0" + theHour;
+      if(theHour<10){
+         theHour = "0" + theHour;
+      }
       status = 'PM';
    }
    else {
